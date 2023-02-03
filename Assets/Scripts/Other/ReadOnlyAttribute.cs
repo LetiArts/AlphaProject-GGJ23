@@ -20,5 +20,3 @@ public class ReadOnlyPropertyDrawer : PropertyDrawer
 		GUI.enabled = true;
 	}
 }
-
-// Learn More with this Tutorial: https://youtu.be/r3nwTGLHygI

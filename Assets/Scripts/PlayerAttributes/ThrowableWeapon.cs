@@ -6,13 +6,13 @@ public class ThrowableWeapon : MonoBehaviour
 {
 	public Vector2 direction;
 	public bool hasHit = false;
-	PlayerData playerData;
+	public float speed = 10f;
 
     // Update is called once per frame
     void FixedUpdate()
     {
 		if ( !hasHit)
-		GetComponent<Rigidbody2D>().velocity = direction * playerData.throwableSpeed;
+		GetComponent<Rigidbody2D>().velocity = direction * speed;
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
