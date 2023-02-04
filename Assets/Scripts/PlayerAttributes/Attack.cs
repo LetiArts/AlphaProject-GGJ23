@@ -2,6 +2,7 @@ using System.Threading;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
 public class Attack : MonoBehaviour
 {
@@ -23,10 +24,18 @@ public class Attack : MonoBehaviour
 	//checks if attack input has been recieved
 	public bool InputRecieved;
 
-	[Header("Camera Shake")]
-	public float shakeAmt = 0.5f;
-	public float shakeLenght = 1f;
-	public float shakeFrequency = 0.5f;
+	[Header("Attack Camera Shake")]
+	public float shakeMagnitude = 4f;
+	public float roughness = 4f;
+	public float fadeInTime = 0.1f;
+	public float fadeOutTIme = 1f;
+
+	[Header("Dash Camera Shake")]
+	public float _dashShakeMagnitude = 4f;
+	public float _dashRoughness = 4f;
+	public float _dashFadeInTime = 0.1f;
+	public float _dashFadeOutTIme = 1f;
+
 
 	private void Awake()
 	{
@@ -42,14 +51,6 @@ public class Attack : MonoBehaviour
 		{
 			CheckAttack();
 		}
-
-		// if (Input.GetKeyDown(KeyCode.E) && canAttack)
-		// {
-		// 	canAttack = false;
-		
-		// 	StartCoroutine(UseAbility());
-		// 	StartCoroutine(AttackCooldown());
-		// }
 	}
 
 	IEnumerator UseAbility()
@@ -108,7 +109,7 @@ public class Attack : MonoBehaviour
 				EnemyAI enemyAI = collidersEnemies[i].gameObject.GetComponent<EnemyAI>();
 				if (enemy != null)
 				{
-					CameraShake.instance.Shake(shakeAmt, shakeLenght, shakeFrequency);
+					CameraShaker.Instance.ShakeOnce(shakeMagnitude, roughness, fadeInTime, fadeOutTIme);
 					enemy.DamageEnemy (dmgValue);
 				}
 
@@ -123,7 +124,7 @@ public class Attack : MonoBehaviour
 	public void DoDashAttack()
 	{
 		dashDmgValue = Mathf.Abs(dashDmgValue);
-		Collider2D[] collidersEnemies = Physics2D.OverlapCircleAll(transform.position, 4);
+		Collider2D[] collidersEnemies = Physics2D.OverlapCircleAll(transform.position, 5);
 
 		for (int i = 0; i < collidersEnemies.Length; i++)
 		{
@@ -133,7 +134,6 @@ public class Attack : MonoBehaviour
 				EnemyAI enemyAI = collidersEnemies[i].gameObject.GetComponent<EnemyAI>();
 				if (enemy != null)
 				{
-					CameraShake.instance.Shake(shakeAmt, shakeLenght, shakeFrequency);
 					enemy.DamageEnemy (dashDmgValue);
 					Debug.Log($"Dashed Enemy and did {dashDmgValue} damage");
 				}
@@ -144,6 +144,7 @@ public class Attack : MonoBehaviour
 				}
 			}
 		}
+		CameraShaker.Instance.ShakeOnce(_dashShakeMagnitude, _dashRoughness, _dashFadeInTime, _dashFadeOutTIme);
 	}
 
 

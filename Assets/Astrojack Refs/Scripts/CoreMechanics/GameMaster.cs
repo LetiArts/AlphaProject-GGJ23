@@ -35,8 +35,6 @@ public class GameMaster : MonoBehaviour {
 	public string respawnCountdownSound = "RespawnCountdown";
 	public string spawnSound = "Spawn";
 
-	public CameraShake cameraShake;
-
 	[SerializeField]
 	private GameObject gameOverUI;
 
@@ -45,10 +43,6 @@ public class GameMaster : MonoBehaviour {
 
 	void Start()
 	{
-		if (cameraShake == null)
-		{
-			Debug.LogError("No camera shake referenced in GameMaster");
-		}
 		ScoreMaster.instance.ResetScore ();
 		_remainingLives = maxLives;
 
