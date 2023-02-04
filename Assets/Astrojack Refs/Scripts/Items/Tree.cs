@@ -10,8 +10,8 @@ public class Tree : MonoBehaviour
     public TreeStats stats;
     [SerializeField]
 	private StatusIndicator statusIndicator;
-	public Animator TreeAnimator;
-	public Button RepairButton;
+	// public Animator TreeAnimator;
+	// public Button RepairButton;
 	public ParticleSystem fireParticles;
 
     public bool isInvincible, canRegenerate;

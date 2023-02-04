@@ -22,7 +22,10 @@ public class HealthBar : MonoBehaviour
 
     void Update()
     {
-        healthBar.fillAmount = Mathf.SmoothDamp(healthBar.fillAmount, stats.curHealth / stats.maxHealth, ref healthVelocity, smoothTime);
+        if(healthBar != null)
+        {
+            healthBar.fillAmount = Mathf.SmoothDamp(healthBar.fillAmount, stats.curHealth / stats.maxHealth, ref healthVelocity, smoothTime);
+        }
         
         if(Player.instance.canRegenerate && Player.instance.NeedsHealth())
 		{
@@ -65,13 +68,19 @@ public class HealthBar : MonoBehaviour
         if (stats.curHealth <= lowHealthThreshold && !lowHealth)
         {
             lowHealth = true;
-            healthBar.color = lowHealthColor;
+            if (healthBar != null)
+            {
+                healthBar.color = lowHealthColor;
+            }
             lowHealthAnim.Play("low_health_indicator");
         }
         else if (stats.curHealth > lowHealthThreshold && lowHealth)
         {
             lowHealth = false;
-            healthBar.color = normalHealthColor;
+            if (healthBar != null)
+            {
+                healthBar.color = normalHealthColor;
+            }
             lowHealthAnim.Play("idle_low_health_indicator");
         }
     }

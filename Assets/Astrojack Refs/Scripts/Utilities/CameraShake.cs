@@ -1,7 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
-public class CameraShake : MonoBehaviour {
+public class CameraShake : MonoBehaviour 
+{
+	public static CameraShake instance;
 
 	public Camera mainCam;
 
@@ -9,6 +11,8 @@ public class CameraShake : MonoBehaviour {
 
 	void Awake()
 	{
+		instance = this;
+		
 		if (mainCam == null)
 			mainCam = Camera.main;
 	}

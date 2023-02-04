@@ -22,6 +22,9 @@ public class Attack : MonoBehaviour
 	//checks if attack input has been recieved
 	public bool InputRecieved;
 
+	[Header("Camera Shake")]
+	public float shakeAmt = 0.5f;
+	public float shakeLenght = 1f;
 
 	private void Awake()
 	{
@@ -72,7 +75,7 @@ public class Attack : MonoBehaviour
 			//attack input recieved
 			InputRecieved = true;
 			//do attack damage
-			DoAttack();
+			// DoAttack();
 			//let's tell the system we cannot recieve further input
 			canRecieveInput = false;
 		}else{
@@ -103,6 +106,7 @@ public class Attack : MonoBehaviour
 				EnemyAI enemyAI = collidersEnemies[i].gameObject.GetComponent<EnemyAI>();
 				if (enemy != null)
 				{
+					CameraShake.instance.Shake(shakeAmt, shakeLenght);
 					enemy.DamageEnemy (dmgValue);
 				}
 
