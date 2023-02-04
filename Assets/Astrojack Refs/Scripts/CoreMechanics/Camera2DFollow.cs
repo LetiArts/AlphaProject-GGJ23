@@ -19,8 +19,8 @@ namespace UnityStandardAssets._2D
 
         [Space]
         [Header("Horizontal Clamp")]
-        [SerializeField] private float clampXmin; 
-        [SerializeField] private float clampXmax;
+        public Transform leftClamp;
+        public Transform rightClamp;
 
 		float nextTimeToSearch = 0;
 
@@ -61,7 +61,7 @@ namespace UnityStandardAssets._2D
             Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref m_CurrentVelocity, damping);
 
 			newPos = new Vector3 (newPos.x, Mathf.Clamp(newPos.y, yPosRestriction, Mathf.Infinity), newPos.z);
-            transform.position = new Vector3(Mathf.Clamp(newPos.x,clampXmin, clampXmax),newPos.y,newPos.z);
+            transform.position = new Vector3(Mathf.Clamp(newPos.x, leftClamp.position.x, rightClamp.position.x),newPos.y,newPos.z);
 
             m_LastTargetPosition = target.position;
         }
