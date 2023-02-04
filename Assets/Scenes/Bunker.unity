@@ -13935,8 +13935,14 @@ MonoBehaviour:
   canAttack: 1
   canRecieveInput: 1
   InputRecieved: 0
-  shakeAmt: 0.5
-  shakeLenght: 1
+  magnitudeAttack: 2.5
+  roughnessAttack: 2.5
+  fadeInAttack: 0.1
+  fadeOutAttack: 1
+  magnitudeDash: 1.5
+  roughnessDash: 1
+  fadeInDash: 0.1
+  fadeOutDash: 0.5
 --- !u!1 &1192481040
 GameObject:
   m_ObjectHideFlags: 0
@@ -21963,7 +21969,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4008325891806825}
   - component: {fileID: 114522258450480487}
-  - component: {fileID: 114038125487496631}
   - component: {fileID: 114175900196985643}
   - component: {fileID: 114915564669126288}
   m_Layer: 0
@@ -22484,15 +22489,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1293260753053150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 2ab8353b5ebd32545867da143199a814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   DefaultPosInfluence: {x: 0.15, y: 0.15, z: 0.15}
   DefaultRotInfluence: {x: 0, y: 0, z: 1}
   RestPositionOffset: {x: 0, y: 0, z: 0}
   RestRotationOffset: {x: 0, y: 0, z: 0}
-  posAddShake: {x: 0, y: 0, z: 0}
-  rotAddShake: {x: 0, y: 0, z: 0}
 --- !u!82 &82076819836612767
 AudioSource:
   m_ObjectHideFlags: 0
@@ -23493,19 +23496,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114038125487496631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974698672533145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a8570dd84cecd47a1b1cc2336e6f33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCam: {fileID: 0}
 --- !u!114 &114057167917553738
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -89,18 +89,18 @@ public class ShopItemButton : MonoBehaviour
                 Player.instance.healthRegenRate += 0.5f;
             }
         }
-        else if (name == "Shredder")
-        {
-            if (curLevel == 1)
-            {
-                Weapon.instance.Damage += 5;
-            }
-            else 
-            {
-                Weapon.instance.Damage += 5;
-                Weapon.instance.maxAmmo += 10; 
-            }      
-        }
+        // else if (name == "Shredder")
+        // {
+        //     if (curLevel == 1)
+        //     {
+        //         Weapon.instance.Damage += 5;
+        //     }
+        //     else 
+        //     {
+        //         Weapon.instance.Damage += 5;
+        //         Weapon.instance.maxAmmo += 10; 
+        //     }      
+        // }
         else if (name == "Drone")
         {
             if (curLevel == 1)

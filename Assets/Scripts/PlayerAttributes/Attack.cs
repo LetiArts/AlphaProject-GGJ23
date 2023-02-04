@@ -2,6 +2,7 @@ using System.Threading;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
 public class Attack : MonoBehaviour
 {
@@ -24,8 +25,18 @@ public class Attack : MonoBehaviour
 	public bool InputRecieved;
 
 	[Header("Camera Shake")]
-	public float shakeAmt = 0.5f;
-	public float shakeLenght = 1f;
+	public float magnitudeAttack = 2.5f;
+	public float roughnessAttack = 2.5f;
+	public float fadeInAttack = 0.1f; 
+	public float fadeOutAttack = 1f;
+
+	[Space]
+	public float magnitudeDash = 2.5f;
+	public float roughnessDash = 2.5f;
+	public float fadeInDash = 0.1f; 
+	public float fadeOutDash = 1f;
+
+
 
 	private void Awake()
 	{
@@ -41,14 +52,6 @@ public class Attack : MonoBehaviour
 		{
 			CheckAttack();
 		}
-
-		// if (Input.GetKeyDown(KeyCode.E) && canAttack)
-		// {
-		// 	canAttack = false;
-		
-		// 	StartCoroutine(UseAbility());
-		// 	StartCoroutine(AttackCooldown());
-		// }
 	}
 
 	IEnumerator UseAbility()
@@ -107,7 +110,7 @@ public class Attack : MonoBehaviour
 				EnemyAI enemyAI = collidersEnemies[i].gameObject.GetComponent<EnemyAI>();
 				if (enemy != null)
 				{
-					CameraShake.instance.Shake(shakeAmt, shakeLenght);
+					CameraShaker.Instance.ShakeOnce(magnitudeAttack, roughnessAttack, fadeInAttack, fadeOutAttack);
 					enemy.DamageEnemy (dmgValue);
 				}
 
@@ -132,7 +135,7 @@ public class Attack : MonoBehaviour
 				EnemyAI enemyAI = collidersEnemies[i].gameObject.GetComponent<EnemyAI>();
 				if (enemy != null)
 				{
-					CameraShake.instance.Shake(shakeAmt, shakeLenght);
+					CameraShaker.Instance.ShakeOnce(magnitudeDash, roughnessDash, fadeInDash, fadeOutDash);
 					enemy.DamageEnemy (dashDmgValue);
 					Debug.Log($"Dashed Enemy and did {dashDmgValue} damage");
 				}
