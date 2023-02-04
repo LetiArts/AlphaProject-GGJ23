@@ -1,12 +1,13 @@
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 public class CameraShake : MonoBehaviour 
 {
 	public static CameraShake instance;
 
 	public Camera mainCam;
+
+	float shakeAmount = 0;
 
 	void Awake()
 	{
@@ -16,29 +17,32 @@ public class CameraShake : MonoBehaviour
 			mainCam = Camera.main;
 	}
 
-	public void Shake(float intensity, float duration, float frequency, float smoothTime = 0.5f)
+	public void Shake(float amt, float length)
 	{
-		StartCoroutine(ShakeCoroutine(intensity, duration, frequency, smoothTime));
+		shakeAmount = amt;
+		InvokeRepeating("DoShake", 0, 0.01f);
+		Invoke("StopShake", length);
 	}
 
-	IEnumerator ShakeCoroutine(float intensity, float duration, float frequency, float smoothTime)
+	void DoShake()
 	{
-		Vector3 originalPos = mainCam.transform.localPosition;
-		float elapsed = 0.0f;
-		while (elapsed < duration)
+		if (shakeAmount > 0)
 		{
-			elapsed += Time.deltaTime;          
+			Vector3 camPos = mainCam.transform.position;
 
-			float x = originalPos.x + Random.Range(-1f, 1f) * intensity;
-			float y = originalPos.y + Random.Range(-1f, 1f) * intensity;
+			float offsetX = Random.value * shakeAmount * 2 - shakeAmount;
+			float offsetY = Random.value * shakeAmount * 2 - shakeAmount;
+			camPos.x += offsetX;
+			camPos.y += offsetY;
 
-			Vector3 newPos = new Vector3(x, y, originalPos.z);
-			mainCam.transform.localPosition = Vector3.Lerp(mainCam.transform.localPosition, newPos, 1 - Mathf.Exp(-smoothTime * Time.deltaTime));
-
-			intensity = Mathf.Lerp(intensity, 0, elapsed / duration);
-			frequency = Mathf.Lerp(frequency, 0, elapsed / duration);
-			yield return new WaitForSeconds(1 / frequency);
+			mainCam.transform.position = camPos;
 		}
-		mainCam.transform.localPosition = originalPos;
 	}
+
+	void StopShake()
+	{
+		CancelInvoke("DoShake");
+		mainCam.transform.localPosition = Vector3.zero;
+	}
+
 }
