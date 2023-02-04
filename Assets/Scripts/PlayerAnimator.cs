@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
 {
+    public static PlayerAnimator instance;
     private PlayerMovement mov;
-    private Animator anim;
+    [HideInInspector] public Animator anim;
     private SpriteRenderer spriteRend;
 
     private DemoManager demoManager;
@@ -28,6 +29,10 @@ public class PlayerAnimator : MonoBehaviour
     public bool isFalling { private get; set; }
     public bool isDashing { private get; set; }
     public bool isWallSliding { private get; set; }
+
+    private void Awake() {
+        instance = this;
+    }
 
     private void Start()
     {

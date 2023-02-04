@@ -58,19 +58,19 @@ public class ShopItemButton : MonoBehaviour
             if (curLevel == 1)
             {
                 //tell character controller to switch to jetpack
-                CharacterController2D.instance.switchedToJetpack = true; 
+                // CharacterController2D.instance.switchedToJetpack = true; 
                 //set the jetpack indicator activator
             }
             else if (curLevel == 2)
             {
                 //def fill rate is 0.1 so 100% = 1
-                CharacterController2D.instance.fillupRate += 0.1f;
+                // CharacterController2D.instance.fillupRate += 0.1f;
             }
             else{
                 //def fill rate is 0.1 so 100% = 1
-                CharacterController2D.instance.fillupRate += 0.1f;
+                // CharacterController2D.instance.fillupRate += 0.1f;
                 //def maxJetpack time is 1 so 100% = 10
-                CharacterController2D.instance.maxJetpackTime += 1f;
+                // CharacterController2D.instance.maxJetpackTime += 1f;
             }
         }
         else if (name == "Vitality")
@@ -106,11 +106,7 @@ public class ShopItemButton : MonoBehaviour
             if (curLevel == 1)
             {
                 WaveSpawner.instance.SpawnDrone();
-            }
-            else{
-                PlayerCompanion.instance.moveSpeed += 50f;
-                PlayerCompanion.instance.dealingDamage += 10;
-            }        
+            }     
         }
     }
 

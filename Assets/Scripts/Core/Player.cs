@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Player : MonoBehaviour 
@@ -7,8 +8,10 @@ public class Player : MonoBehaviour
 	public static Player instance;
 
 	private SoundManager audioManager;
+	PlayerMovement playerMovement;
+	PlayerAnimator playerAnimator;
+
 	public PlayerStats stats;
-	CharacterController2D characterController;
 
 	[SerializeField]
 	private HealthBar healthBar;
@@ -19,6 +22,8 @@ public class Player : MonoBehaviour
 	[HideInInspector] public bool isRestoringOxygen = false;
 	[HideInInspector] public bool shouldLooseOxygen = false;
 	bool isLoosingOxygenHealth = false;
+	private Rigidbody2D m_Rigidbody2D;
+
 
 	private void Awake() {
 		instance = this;
@@ -27,12 +32,13 @@ public class Player : MonoBehaviour
 		healthRegenRate = stats.healthRegenRate;
 		reductionMultiplier = stats.oxygenReductionMultiplier;
 		refillMultiplier = stats.oxygenRefillMultiplier;
+		
+		playerMovement = PlayerMovement.instance;
+		playerAnimator = PlayerAnimator.instance;
 	}
 
 	void Start()
 	{
-		characterController = CharacterController2D.instance;
-
 		stats.curHealth = stats.maxHealth;
 		stats.curOxygen = stats.maxOxygen;
 
@@ -144,7 +150,7 @@ public class Player : MonoBehaviour
 		{
 			if (stats.curHealth <= 0) {
 				audioManager.PlaySFX (stats.deathSoundName);
-				characterController.KillPlayer();
+				KillPlayer();
 			} 
 			else 
 			{
@@ -152,6 +158,21 @@ public class Player : MonoBehaviour
 			}
 		}
 	}
+
+	public void KillPlayer()
+	{
+		StartCoroutine(WaitToDead());
+	}
+
+	IEnumerator WaitToDead()
+	{
+		playerAnimator.anim.SetBool("IsDead", true);
+		yield return new WaitForSeconds(0.4f);
+		playerMovement.RB.velocity = new Vector2(0, m_Rigidbody2D.velocity.y);
+		yield return new WaitForSeconds(1.1f);
+		SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+	}
+
 
 	IEnumerator MakeInvincible(float time) 
 	{

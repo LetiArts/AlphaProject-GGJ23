@@ -1906,7 +1906,7 @@ GameObject:
   - component: {fileID: 676160873}
   - component: {fileID: 676160872}
   - component: {fileID: 676160874}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: Tree
   m_TagString: Beacon
   m_Icon: {fileID: 0}
@@ -2911,6 +2911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d024cc73ad207e438a7a1d777842e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   shouldTilt: 0
   maxTilt: 0
   tiltSpeed: 0
@@ -3034,7 +3035,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1001811932}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: groundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8172,7 +8173,6 @@ MonoBehaviour:
   - {fileID: 906774667}
   - {fileID: 1131435438}
   - {fileID: 54868277}
-  itemBeingDropped: {fileID: 0}
 --- !u!114 &114206698092537526
 MonoBehaviour:
   m_ObjectHideFlags: 0

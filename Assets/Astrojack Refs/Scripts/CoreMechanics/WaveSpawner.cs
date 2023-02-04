@@ -48,8 +48,8 @@ public class WaveSpawner : MonoBehaviour {
 	[Header("Dropbox logic")]
 	public Transform[] DropSpawnPositions;
 	[HideInInspector]
-	public GameObject itemBeingDropped;
-	bool spawnedDrone = false;
+	// public GameObject itemBeingDropped;
+	// bool spawnedDrone = false;
 
 	private void Awake() {
 		instance = this;
@@ -84,14 +84,6 @@ public class WaveSpawner : MonoBehaviour {
 			if (state != SpawnState.SPAWNING)
 			{
 				// ShopController.instance.shopButton.SetActive(false);
-
-				if(spawnedDrone)
-				{
-					PlayerCompanion.instance.Shoot();
-					PlayerCompanion.instance.canShoot = true;
-					PlayerCompanion.instance.waveCompleted = false;
-				}
-
 				StartCoroutine( SpawnWave ( enemyWaves.Waves[nextWave] ) );
 			}
 		}
@@ -105,9 +97,6 @@ public class WaveSpawner : MonoBehaviour {
 	{
 		Debug.Log("Wave Completed!");
 		// ShopController.instance.shopButton.SetActive(true);
-
-		PlayerCompanion.instance.canShoot = false;
-		PlayerCompanion.instance.waveCompleted = true;
 
 		state = SpawnState.COUNTING;
 		waveCountdown = timeBetweenWaves;
@@ -204,6 +193,6 @@ public class WaveSpawner : MonoBehaviour {
 		GameObject drone = ObjectPooler.SharedInstance.GetPooledObject("Companion");
 		drone.transform.position = DropSpawnPositions[0].position;
 		drone.SetActive(true);
-		spawnedDrone = true;
+		// spawnedDrone = true;
 	}
 }

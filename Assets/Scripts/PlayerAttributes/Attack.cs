@@ -119,6 +119,7 @@ public class Attack : MonoBehaviour
 		if (attackCheck == null)
 			return;
 
+        Gizmos.color = Color.red;
 		Gizmos.DrawWireSphere(attackCheck.position, attackRange);
 	}
 }
