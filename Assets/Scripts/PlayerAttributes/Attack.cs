@@ -8,6 +8,7 @@ public class Attack : MonoBehaviour
 	public static Attack instance;
 
 	public float dmgValue = 4;
+	public float dashDmgValue = 20f;
 	public GameObject throwableObject;
 	public Transform attackCheck;
 	public Transform abilityShotPoint;
@@ -113,6 +114,32 @@ public class Attack : MonoBehaviour
 				if (enemyAI != null)
 				{
 					enemyAI.DamageEnemy (dmgValue);
+				}
+			}
+		}
+	}
+
+	public void DoDashAttack()
+	{
+		dashDmgValue = Mathf.Abs(dashDmgValue);
+		Collider2D[] collidersEnemies = Physics2D.OverlapCircleAll(transform.position, 4);
+
+		for (int i = 0; i < collidersEnemies.Length; i++)
+		{
+			if (collidersEnemies[i].gameObject.tag == "Enemy")
+			{
+				Enemy enemy = collidersEnemies[i].gameObject.GetComponent<Enemy>();
+				EnemyAI enemyAI = collidersEnemies[i].gameObject.GetComponent<EnemyAI>();
+				if (enemy != null)
+				{
+					CameraShake.instance.Shake(shakeAmt, shakeLenght);
+					enemy.DamageEnemy (dashDmgValue);
+					Debug.Log($"Dashed Enemy and did {dashDmgValue} damage");
+				}
+
+				if (enemyAI != null)
+				{
+					enemyAI.DamageEnemy (dashDmgValue);
 				}
 			}
 		}

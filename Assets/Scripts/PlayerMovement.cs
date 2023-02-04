@@ -514,7 +514,7 @@ public class PlayerMovement : MonoBehaviour
         //Begins the "end" of our dash where we return some control to the player but still limit run acceleration (see Update() and Run())
         SetGravityScale(Data.gravityScale);
         RB.velocity = Data.dashEndSpeed * dir.normalized;
-
+        Attack.instance.DoDashAttack();
         while (Time.time - startTime <= Data.dashEndTime)
         {
             yield return null;

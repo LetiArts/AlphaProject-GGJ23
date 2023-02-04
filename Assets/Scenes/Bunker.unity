@@ -13560,6 +13560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmgValue: 40
+  dashDmgValue: 10
   throwableObject: {fileID: 8964735631827330817, guid: 7f1a3776c7074fb4ab57d4604a3e7dc2, type: 3}
   attackCheck: {fileID: 199657871}
   abilityShotPoint: {fileID: 1231544759}
@@ -13570,8 +13571,8 @@ MonoBehaviour:
   canAttack: 1
   canRecieveInput: 1
   InputRecieved: 0
-  shakeAmt: 0.05
-  shakeLenght: 0.1
+  shakeAmt: 0.1
+  shakeLenght: 0.12
 --- !u!1 &1222770007
 GameObject:
   m_ObjectHideFlags: 0
