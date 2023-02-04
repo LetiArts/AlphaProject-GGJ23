@@ -29,11 +29,11 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - Tree
+  - Props
+  - EnemyWeapon
+  - PlayerWeapon
   - 
   - 
   - 
