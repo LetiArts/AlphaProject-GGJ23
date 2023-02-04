@@ -12,7 +12,7 @@ public class Tree : MonoBehaviour
 	private StatusIndicator statusIndicator;
 	// public Animator TreeAnimator;
 	// public Button RepairButton;
-	public ParticleSystem fireParticles;
+	public Animator treeAnim;
 
     public bool isInvincible, canRegenerate;
 	[SerializeField] private LayerMask m_WhatIsGround;							// A mask determining what is ground to the character
@@ -28,6 +28,7 @@ public class Tree : MonoBehaviour
 
 
     [Space]
+	public bool shouldGrow = false;
     [Range(0,1)]
     public float plantGrowth;
 	public Transform treeTransform;
@@ -52,16 +53,13 @@ public class Tree : MonoBehaviour
         startNendsize = plantFullSize + startGrowthSize;
 	}
 
-	// private void OnTriggerEnter2D(Collider2D other) {
-	// }
-
-	// private void OnTriggerExit2D(Collider2D other) {
-
-	// }
 
     private void Update()
     {
-       PlantGrowth();
+		if (shouldGrow)
+		{
+			PlantGrowth();
+		}
     }
 
     public void CheckGroundStatus()
@@ -85,14 +83,14 @@ public class Tree : MonoBehaviour
 		{
 			if (curHealth <= 0) {
 				SoundManager.instance.PlaySFX (stats.deathSoundName);
-				// DestroyTree();
+				DestroyTree();
 			} 
 
 			statusIndicator.SetHealth(curHealth, stats.maxHealth, true);
 
 			if (curHealth <= stats.maxHealth / 2)
 			{
-				fireParticles.Play();
+				treeAnim.Play("low_health_indicator");
 			}
 		}
 
@@ -138,10 +136,10 @@ public class Tree : MonoBehaviour
 		isInvincible = false;
 	}
 
-    // void DestroyTree()
-    // {
-
-    // }
+    void DestroyTree()
+    {
+		treeAnim.Play("treeDeath");
+    }
 
     void PlantGrowth()
     {

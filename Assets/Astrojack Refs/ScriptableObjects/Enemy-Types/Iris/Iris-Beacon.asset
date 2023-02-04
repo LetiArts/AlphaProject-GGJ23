@@ -17,7 +17,7 @@ MonoBehaviour:
   timeToDecideNextMove: 0.5
   moveSpeed: 5
   m_DashForce: 25
-  target: Beacon
+  target: TreeTarget
   meleeDist: 3
   explodeDist: 2
   explosionDelay: 10
