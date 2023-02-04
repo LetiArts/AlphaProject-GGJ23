@@ -285,7 +285,7 @@ public class Enemy : MonoBehaviour
 				{
 					Player.instance.DamagePlayer(enemyProperties.dealingDamage);
 				}
-				else if (enemyProperties.target == "TreeTarget" && collidersEnemies[i].gameObject.tag == "Beacon")
+				else if (enemyProperties.target == "Tree" && collidersEnemies[i].gameObject.tag == "Tree")
 				{
 					//inflict half damage when targeting Tree
 					collidersEnemies[i].gameObject.GetComponent<Tree>().DamageTree(enemyProperties.dealingDamage / 2);

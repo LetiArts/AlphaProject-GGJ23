@@ -12,12 +12,13 @@ public class Tree : MonoBehaviour
 	private StatusIndicator statusIndicator;
 	// public Animator TreeAnimator;
 	// public Button RepairButton;
+	public ParticleSystem fireParticles;
 
     public bool isInvincible, canRegenerate;
 	[SerializeField] private LayerMask m_WhatIsGround;							// A mask determining what is ground to the character
 	[SerializeField] private Transform m_GroundCheck;							// A position marking where to check if the player is grounded.
     [SerializeField] private Vector2 _groundCheckSize = new Vector2(0.49f, 0.03f);
-	public Animator TreeAnim;
+
 	public bool m_Grounded; // Whether or not the Tree is on ground level.
     bool isRegenerating;
 	float curHealth;
@@ -91,7 +92,7 @@ public class Tree : MonoBehaviour
 
 			if (curHealth <= stats.maxHealth / 2)
 			{
-				TreeAnim.Play("low_health_indicator");
+				fireParticles.Play();
 			}
 		}
 
