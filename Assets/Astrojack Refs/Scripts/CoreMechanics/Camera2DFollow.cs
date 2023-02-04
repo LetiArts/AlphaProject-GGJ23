@@ -19,7 +19,7 @@ namespace UnityStandardAssets._2D
 
         [Space]
         [Header("Horizontal Clamp")]
-        [SerializeField] private float clampXmin;
+        [SerializeField] private float clampXmin; 
         [SerializeField] private float clampXmax;
 
 		float nextTimeToSearch = 0;
