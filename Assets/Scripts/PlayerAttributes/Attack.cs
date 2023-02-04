@@ -26,6 +26,7 @@ public class Attack : MonoBehaviour
 	[Header("Camera Shake")]
 	public float shakeAmt = 0.5f;
 	public float shakeLenght = 1f;
+	public float shakeFrequency = 0.5f;
 
 	private void Awake()
 	{
@@ -107,7 +108,7 @@ public class Attack : MonoBehaviour
 				EnemyAI enemyAI = collidersEnemies[i].gameObject.GetComponent<EnemyAI>();
 				if (enemy != null)
 				{
-					CameraShake.instance.Shake(shakeAmt, shakeLenght);
+					CameraShake.instance.Shake(shakeAmt, shakeLenght, shakeFrequency);
 					enemy.DamageEnemy (dmgValue);
 				}
 
@@ -132,7 +133,7 @@ public class Attack : MonoBehaviour
 				EnemyAI enemyAI = collidersEnemies[i].gameObject.GetComponent<EnemyAI>();
 				if (enemy != null)
 				{
-					CameraShake.instance.Shake(shakeAmt, shakeLenght);
+					CameraShake.instance.Shake(shakeAmt, shakeLenght, shakeFrequency);
 					enemy.DamageEnemy (dashDmgValue);
 					Debug.Log($"Dashed Enemy and did {dashDmgValue} damage");
 				}

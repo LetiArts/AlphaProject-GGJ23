@@ -65,18 +65,21 @@ public class StatusIndicator : MonoBehaviour {
 
 			// Debug.Log("we set image fill to " + cacheHealth*.1f);
 			//let's set health bar
-			while (isDamaging && cacheHealth < healthBarFill.fillAmount)
+			if(healthBarFill != null)
 			{
-				healthBarFill.fillAmount -= 2f * Time.deltaTime;
-				yield return null;
-			}
+				while (isDamaging && cacheHealth < healthBarFill.fillAmount)
+				{
+					healthBarFill.fillAmount -= 2f * Time.deltaTime;
+					yield return null;
+				}
 
-			if(Player.instance.canRegenerate && Player.instance.isRegenerating && !isInflicted)
-			{
-				healthBarFill.fillAmount = cacheHealth;
-			}
-			else if (!isDamaging){
-				healthBarFill.fillAmount = cacheHealth;
+				if(Player.instance.canRegenerate && Player.instance.isRegenerating && !isInflicted)
+				{
+					healthBarFill.fillAmount = cacheHealth;
+				}
+				else if (!isDamaging){
+					healthBarFill.fillAmount = cacheHealth;
+				}
 			}
 			
 			yield return null;
