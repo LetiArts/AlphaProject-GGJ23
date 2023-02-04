@@ -19,10 +19,6 @@ public class Player : MonoBehaviour
 	[HideInInspector] public float healthRegenInterval;
 	[HideInInspector] public float healthRegenRate, reductionMultiplier, refillMultiplier;
 	public bool canRegenerate,isRegenerating;
-	[HideInInspector] public bool isRestoringOxygen = false;
-	[HideInInspector] public bool shouldLooseOxygen = false;
-	bool isLoosingOxygenHealth = false;
-	// private Rigidbody2D m_Rigidbody2D;
 
 
 	private void Awake() {
@@ -40,37 +36,14 @@ public class Player : MonoBehaviour
 	void Start()
 	{
 		stats.curHealth = stats.maxHealth;
-		stats.curOxygen = stats.maxOxygen;
-
-		if (healthBar == null)
-		{
-			Debug.LogError("No health bar referenced on Player");
-		}
-		else
-		{
-			healthBar.SetOxygenLevel(stats.curOxygen);
-		}
 
 		audioManager = SoundManager.instance;
 		if (audioManager == null)
 		{
 			Debug.LogError("FREAK OUT! No AudioManager found in the scene.");
 		}
-
-		InitDroppingOxygen();
 	}
 
-	public void InitDroppingOxygen()
-	{
-		StartCoroutine(BeginDroppingOxygen());
-	}
-
-	IEnumerator BeginDroppingOxygen()
-	{
-		yield return new WaitForSeconds(2f);
-		isRestoringOxygen = false;
-		shouldLooseOxygen = true;
-	}
 
 	void Update () {
 		if (transform.position.y <= stats.fallBoundary)
@@ -82,33 +55,7 @@ public class Player : MonoBehaviour
 			DamagePlayer(10);
 			GameObject pill = ObjectPooler.SharedInstance.GetPooledObject("Pill");
 			pill.SetActive(true);
-		}
-
-		if (shouldLooseOxygen)
-		{
-			if (stats.curOxygen > 0 && !isRestoringOxygen)
-			{
-				stats.curOxygen -= reductionMultiplier * Time.deltaTime;
-				healthBar.SetOxygenLevel(stats.curOxygen);
-			}
-			else if (stats.curOxygen <= 0 && !isRestoringOxygen && !isLoosingOxygenHealth)
-			{
-				isLoosingOxygenHealth = true;
-				InvokeRepeating("HealthReduction", 1.0f, 1f);
-			}
-		}
-		//gaining oxygen
-		else 
-		{
-			if (isRestoringOxygen && NeedsOxygen())
-			{
-				CancelInvoke("HealthReduction");
-				isLoosingOxygenHealth = false;
-				stats.curOxygen += 1 * Time.deltaTime * refillMultiplier;
-				healthBar.SetOxygenLevel(stats.curOxygen);
-			}
-		}
-		
+		}	
 	}
 
 	void HealthReduction()
@@ -116,16 +63,6 @@ public class Player : MonoBehaviour
 		DamagePlayer(5f);
 	}
 
-	public bool NeedsOxygen()
-	{
-		bool needsOxygen = false;
-		if (stats.curOxygen < stats.maxOxygen)
-		{
-			needsOxygen = true;
-		}
-
-		return needsOxygen;
-	}
 
 	public bool NeedsHealth()
 	{

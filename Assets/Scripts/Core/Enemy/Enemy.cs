@@ -80,8 +80,6 @@ public class Enemy : MonoBehaviour
 
 	void FindTarget()
 	{
-		bool gotTreeTarget = false;
-
 		if (enemyProperties.target == "Player")
 		{
 			targetObj = GameObject.FindGameObjectWithTag (enemyProperties.target);
@@ -427,6 +425,8 @@ public class Enemy : MonoBehaviour
 				
 		// //sound
 		SoundManager.instance.PlaySFX(enemyProperties.deathSoundName);
+
+		yield break;
 	}
 
 	#region EDITOR METHODS

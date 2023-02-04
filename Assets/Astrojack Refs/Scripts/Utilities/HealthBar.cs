@@ -3,22 +3,17 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public Image healthBar, OxygenBarFill;
+    public Image healthBar;
     public Color normalHealthColor, lowHealthColor;
 	public PlayerStats stats;
     public float maxHealth;
     public float currentHealth;
-    public float regenerationRate;
     public float smoothTime = 0.1f;
     public float lowHealthThreshold = 20f;
-    [Range(0, 1)]
-    public float lowOxygenThreshold = 0.2f;
-    public Animator lowHealthAnim, oxygenFillAnimator;
+    public Animator lowHealthAnim;
     private float healthVelocity;
     private bool lowHealth;
-    //just to ensure we aren't stuck playing the idle anim.. system would work well without this
-    //but i prefer to be more optimal
-    bool isPlayingIdleOxygenIdleAnim = false;
+
 
     private void Start() {
         currentHealth = stats.curHealth;
@@ -80,19 +75,4 @@ public class HealthBar : MonoBehaviour
             lowHealthAnim.Play("idle_low_health_indicator");
         }
     }
-
-    public void SetOxygenLevel(float _curOxygen)
-	{
-		OxygenBarFill.fillAmount = _curOxygen * 0.01f;
-        if (OxygenBarFill.fillAmount <= lowOxygenThreshold)
-        {
-            oxygenFillAnimator.Play("low_oxygen_indicator");
-            isPlayingIdleOxygenIdleAnim = false;
-        }
-        else if (OxygenBarFill.fillAmount > lowOxygenThreshold && !isPlayingIdleOxygenIdleAnim)
-        {
-            oxygenFillAnimator.Play("normal_oxygen_indicator");
-            isPlayingIdleOxygenIdleAnim = true;
-        }
-	}
 }

@@ -12,7 +12,6 @@ public class Tree : MonoBehaviour
 	private StatusIndicator statusIndicator;
 	public Animator TreeAnimator;
 	public Button RepairButton;
-	public Image repairFill;
 	public ParticleSystem fireParticles;
 
     public bool isInvincible, canRegenerate;
@@ -25,16 +24,14 @@ public class Tree : MonoBehaviour
 	float curHealth;
     float healthRegenRate, healthRegenInterval;
 	private float repairSpeed;
-	bool inRange = false; //if player is in range
-	bool needsRepair = false;
-	bool activatedPop = false;
 	bool waited = false; //for regen purposes..
-	bool justRepaired = false;
+
 
     [Space]
     [Range(0,1)]
     public float plantGrowth;
-
+	public Transform treeTransform;
+	public float growthMultiplier;
     public float plantFullSize;
 
 	private void Awake() {
@@ -45,7 +42,6 @@ public class Tree : MonoBehaviour
 		healthRegenRate = stats.healthRegenRate;
 		repairSpeed = stats.repairSpeed;
         curHealth = stats.maxHealth;
-		needsRepair = false;
 		// RepairButton.onClick.AddListener(InitRepair);
 	}
 
@@ -53,43 +49,12 @@ public class Tree : MonoBehaviour
 		CheckGroundStatus();
 	}
 
-	private void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.tag == "Player" && needsRepair == true)
-		{
-			TreeAnimator.Play("repair_pop");
-			RepairButton.interactable = true;
-			activatedPop = true;
-			inRange = true;
-		}
+	// private void OnTriggerEnter2D(Collider2D other) {
+	// }
 
-		if (other.gameObject.tag == "Player" && Player.instance.NeedsOxygen())
-		{
-			Player.instance.shouldLooseOxygen = false;
-			Player.instance.isRestoringOxygen = true;
-		}
-	}
+	// private void OnTriggerExit2D(Collider2D other) {
 
-	private void OnTriggerExit2D(Collider2D other) {
-		if (other.gameObject.tag == "Player" && activatedPop == true)
-		{
-			if (!justRepaired)
-			{
-				TreeAnimator.Play("repair_popout");
-			}
-
-			justRepaired = false;
-
-			RepairButton.interactable = false;
-			activatedPop = false;
-			inRange = false;
-			repairFill.fillAmount = 0;
-		}
-		//if we casually exited the trigger
-		else if (other.gameObject.tag == "Player")
-		{
-			Player.instance.InitDroppingOxygen();
-		}
-	}
+	// }
 
     private void Update()
     {
@@ -109,37 +74,6 @@ public class Tree : MonoBehaviour
 		}
 	}
 
-	public void InitRepair()
-	{
-		StartCoroutine(BeginRepair());
-	}
-
-	IEnumerator BeginRepair()
-	{
-		bool isFilled = false;
-		TreeAnimator.Play("repairing");
-		RepairButton.interactable = false;
-		while (curHealth < stats.maxHealth && inRange)
-		{
-			repairFill.fillAmount += repairSpeed * Time.deltaTime;
-			
-			if (repairFill.fillAmount == 1f && !isFilled)
-			{
-				curHealth = stats.maxHealth;
-				needsRepair = false;
-				statusIndicator.SetHealth(curHealth, stats.maxHealth, false);
-				fireParticles.Stop();
-				justRepaired = true;
-				Debug.LogError("Finished repair");
-				TreeAnimator.Play("repair_popout");
-
-				yield break;
-			}
-			
-			yield return null;
-		}
-	}
-
 	public void DamageTree (int damage) {
 		curHealth -= damage; 
 		Debug.LogWarning("Tree is taking damage");
@@ -148,11 +82,10 @@ public class Tree : MonoBehaviour
 		{
 			if (curHealth <= 0) {
 				SoundManager.instance.PlaySFX (stats.deathSoundName);
-				DestroyTree();
+				// DestroyTree();
 			} 
 
 			statusIndicator.SetHealth(curHealth, stats.maxHealth, true);
-			needsRepair = true;
 
 			if (curHealth <= stats.maxHealth / 2)
 			{
@@ -191,7 +124,6 @@ public class Tree : MonoBehaviour
 		else{
 			isRegenerating = false;
 			waited = false;
-			needsRepair = false;
 			yield break;
 		}
 	}
@@ -203,12 +135,13 @@ public class Tree : MonoBehaviour
 		isInvincible = false;
 	}
 
-    void DestroyTree()
-    {
+    // void DestroyTree()
+    // {
 
-    }
+    // }
+
     void PlantGrowth()
     {
-        transform.localScale = new Vector3(plantFullSize*plantGrowth, plantFullSize * plantGrowth, plantFullSize * plantGrowth);
+        treeTransform.localScale = new Vector3(plantFullSize*plantGrowth, plantFullSize * plantGrowth, plantFullSize * plantGrowth);
     }
 }

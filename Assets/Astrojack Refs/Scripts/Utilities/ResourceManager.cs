@@ -44,9 +44,9 @@ public class ResourceManager : MonoBehaviour
 
     public void SetMoney()
     {
-        if (UIController.instance != null)
-        {
-            UIController.instance.MoneyText.text = _curMoney.ToString();
-        }
+        // if (UIController.instance != null)
+        // {
+        //     UIController.instance.MoneyText.text = _curMoney.ToString();
+        // }
     }
 }
