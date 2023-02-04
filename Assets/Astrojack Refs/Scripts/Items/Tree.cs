@@ -40,7 +40,7 @@ public class Tree : MonoBehaviour
 		repairSpeed = stats.repairSpeed;
         curHealth = stats.maxHealth;
 		needsRepair = false;
-		RepairButton.onClick.AddListener(InitRepair);
+		// RepairButton.onClick.AddListener(InitRepair);
 	}
 
 	private void Start() {

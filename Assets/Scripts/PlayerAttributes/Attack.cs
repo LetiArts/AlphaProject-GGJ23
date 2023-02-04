@@ -94,17 +94,22 @@ public class Attack : MonoBehaviour
 	{
 		dmgValue = Mathf.Abs(dmgValue);
 		Collider2D[] collidersEnemies = Physics2D.OverlapCircleAll(attackCheck.position, attackRange);
+
 		for (int i = 0; i < collidersEnemies.Length; i++)
 		{
 			if (collidersEnemies[i].gameObject.tag == "Enemy")
 			{
-				if (collidersEnemies[i].transform.position.x - transform.position.x < 0)
+				Enemy enemy = collidersEnemies[i].gameObject.GetComponent<Enemy>();
+				EnemyAI enemyAI = collidersEnemies[i].gameObject.GetComponent<EnemyAI>();
+				if (enemy != null)
 				{
-					dmgValue = -dmgValue;
+					enemy.DamageEnemy (dmgValue);
 				}
-				collidersEnemies[i].gameObject.SendMessage("ApplyDamage", dmgValue);
-				// cam.GetComponent<CameraFollow>().ShakeCamera();444444444
-				Debug.Log("Emotional Damage");
+
+				if (enemyAI != null)
+				{
+					enemyAI.DamageEnemy (dmgValue);
+				}
 			}
 		}
 	}

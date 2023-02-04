@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3868564026341816646}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: AttackCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}

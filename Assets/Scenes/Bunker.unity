@@ -603,7 +603,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 199657871}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Attack Check
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -618,7 +618,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199657870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.359, y: 0, z: 0}
+  m_LocalPosition: {x: 0.89, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2888,11 +2888,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818285ecf4048dc418f26697639eabd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmgValue: 4
+  dmgValue: 40
   throwableObject: {fileID: 8964735631827330817, guid: 7f1a3776c7074fb4ab57d4604a3e7dc2, type: 3}
   attackCheck: {fileID: 199657871}
   abilityShotPoint: {fileID: 1231544759}
-  attackRange: 0.44
+  attackRange: 2
   nextAttackTime: 1
   abilityChargeTime: 0.9
   animator: {fileID: 1190176139}
