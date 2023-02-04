@@ -68,11 +68,6 @@ public class Enemy : MonoBehaviour
 	private void Start() {
 		Init();
 
-		// if (statusIndicator != null)
-		// {
-		// 	statusIndicator.SetHealth(curHealth, enemyProperties.maxHealth);
-		// }
-
 		FindTarget();
 
 		if (deathParticles == null)
@@ -92,28 +87,12 @@ public class Enemy : MonoBehaviour
 			targetObj = GameObject.FindGameObjectWithTag (enemyProperties.target);
 		}
 		//if we have Tree and its not above ground, let's go for it else let's go for player
-		else if (enemyProperties.target == "Tree")
+		else
 		{
-			GameObject[] targets = GameObject.FindGameObjectsWithTag ("Tree");
-			
-			if (targets != null && OnGroundLevel())
-			{
-				foreach (var obj in targets)
-				{
-					//let's pick first grounded object and return out of loop
-					if (obj.GetComponent<Tree>().m_Grounded == true)
-					{
-						targetObj = obj;
-						gotTreeTarget = true;
-						return;
-					}
-				}
-			}
-			else{
-				targetObj = GameObject.FindGameObjectWithTag ("Player");
-			}
+			targetObj = GameObject.FindGameObjectWithTag (enemyProperties.target);
+
 			//if there are no available Trees on ground, let's get player
-			if (targets == null || gotTreeTarget == false)
+			if (targetObj == null)
 			{
 				targetObj = GameObject.FindGameObjectWithTag ("Player");
 			}
@@ -169,10 +148,7 @@ public class Enemy : MonoBehaviour
 				else if (Mathf.Abs(distToPlayer) > 0.25f && Mathf.Abs(distToPlayer) < enemyProperties.meleeDist && Mathf.Abs(distToPlayerY) < enemyProperties.meleeDist)
 				{
 					m_Rigidbody2D.velocity = new Vector2(0f, m_Rigidbody2D.velocity.y);
-					// if ((distToPlayer > 0f && transform.localScale.x < 0f) || (distToPlayer < 0f && transform.localScale.x > 0f)) 
-					// {
-					// 	Flip();
-					// }
+
 
 					//I set the Melee attack function in animator
 					if (canAttack)

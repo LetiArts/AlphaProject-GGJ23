@@ -8,7 +8,7 @@ public class DropableItem : MonoBehaviour
     // [SerializeField] private LayerMask _groundLayer;
     // [SerializeField] private Vector2 _groundCheckSize = new Vector2(0.49f, 0.03f);
     // bool isFrozen;
-    private Rigidbody2D rigidbody;
+    private new Rigidbody2D rigidbody;
     public DropableItemStats itemStats;
 
     private void Awake() {

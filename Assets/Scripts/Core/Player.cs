@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 	public static Player instance;
 
 	private SoundManager audioManager;
-	PlayerMovement playerMovement;
+	public PlayerMovement playerMovement;
 	PlayerAnimator playerAnimator;
 
 	public PlayerStats stats;
@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
 	[HideInInspector] public bool isRestoringOxygen = false;
 	[HideInInspector] public bool shouldLooseOxygen = false;
 	bool isLoosingOxygenHealth = false;
-	private Rigidbody2D m_Rigidbody2D;
+	// private Rigidbody2D m_Rigidbody2D;
 
 
 	private void Awake() {
@@ -168,7 +168,7 @@ public class Player : MonoBehaviour
 	{
 		playerAnimator.anim.SetBool("IsDead", true);
 		yield return new WaitForSeconds(0.4f);
-		playerMovement.RB.velocity = new Vector2(0, m_Rigidbody2D.velocity.y);
+		playerMovement.RB.velocity = new Vector2(0, playerMovement.RB.velocity.y);
 		yield return new WaitForSeconds(1.1f);
 		SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
 	}

@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - Missile
   - ShopBtn
   - Pill
   - SmallGun
@@ -21,6 +20,7 @@ TagManager:
   - Ground
   - DroneHook
   - GM
+  - TreeTarget
   layers:
   - Default
   - TransparentFX
