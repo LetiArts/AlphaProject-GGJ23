@@ -38,13 +38,13 @@ public class Attack : MonoBehaviour
 			CheckAttack();
 		}
 
-		if (Input.GetKeyDown(KeyCode.E) && canAttack)
-		{
-			canAttack = false;
+		// if (Input.GetKeyDown(KeyCode.E) && canAttack)
+		// {
+		// 	canAttack = false;
 		
-			StartCoroutine(UseAbility());
-			StartCoroutine(AttackCooldown());
-		}
+		// 	StartCoroutine(UseAbility());
+		// 	StartCoroutine(AttackCooldown());
+		// }
 	}
 
 	IEnumerator UseAbility()
@@ -55,13 +55,7 @@ public class Attack : MonoBehaviour
 		GameObject throwableWeapon = Instantiate(throwableObject, abilityShotPoint.position, Quaternion.identity) as GameObject; 
 		Vector2 direction = new Vector2(transform.localScale.x, 0);
 		throwableWeapon.GetComponent<ThrowableWeapon>().direction = direction; 
-		if (!PlayerMovement.instance.IsFacingRight)
-		{
-			throwableWeapon.GetComponent<SpriteRenderer>().flipX = true;
-		}
 		throwableWeapon.name = "ThrowableWeapon";
-
-		yield break;
 	}
 
 	IEnumerator AttackCooldown()
@@ -109,7 +103,7 @@ public class Attack : MonoBehaviour
 					dmgValue = -dmgValue;
 				}
 				collidersEnemies[i].gameObject.SendMessage("ApplyDamage", dmgValue);
-				// cam.GetComponent<CameraFollow>().ShakeCamera();
+				// cam.GetComponent<CameraFollow>().ShakeCamera();444444444
 				Debug.Log("Emotional Damage");
 			}
 		}
