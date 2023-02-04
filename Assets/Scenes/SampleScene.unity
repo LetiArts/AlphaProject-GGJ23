@@ -671,7 +671,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -705,7 +705,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &9206482403312285180
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -722,7 +722,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9206482403763400332
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,6 +878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d024cc73ad207e438a7a1d777842e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   shouldTilt: 0
   maxTilt: 0
   tiltSpeed: 0
@@ -896,6 +897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmgValue: 4
+  dashDmgValue: 20
   throwableObject: {fileID: 8964735631827330817, guid: 7f1a3776c7074fb4ab57d4604a3e7dc2, type: 3}
   attackCheck: {fileID: 9206482402477184014}
   abilityShotPoint: {fileID: 9206482402238677940}
@@ -906,6 +908,14 @@ MonoBehaviour:
   canAttack: 1
   canRecieveInput: 1
   InputRecieved: 0
+  magnitudeAttack: 2.5
+  roughnessAttack: 2.5
+  fadeInAttack: 0.1
+  fadeOutAttack: 1
+  magnitudeDash: 2.5
+  roughnessDash: 2.5
+  fadeInDash: 0.1
+  fadeOutDash: 1
 --- !u!1 &9206482403919332786
 GameObject:
   m_ObjectHideFlags: 0

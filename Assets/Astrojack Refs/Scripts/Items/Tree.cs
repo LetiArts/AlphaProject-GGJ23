@@ -138,8 +138,16 @@ public class Tree : MonoBehaviour
 
     void DestroyTree()
     {
+		StartCoroutine(DeactivateObj());
 		treeAnim.Play("treeDeath");
     }
+
+	IEnumerator DeactivateObj() 
+	{
+		yield return new WaitForSeconds(2);
+		this.gameObject.SetActive(false);
+		yield break;
+	}
 
     void PlantGrowth()
     {

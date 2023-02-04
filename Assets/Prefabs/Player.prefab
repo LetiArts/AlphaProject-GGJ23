@@ -84,7 +84,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,7 +103,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1427554551
-  m_SortingLayer: 4
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 18e58b53d24b6f445bd5bf2aec0e8409, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -255,6 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d024cc73ad207e438a7a1d777842e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   shouldTilt: 0
   maxTilt: 0
   tiltSpeed: 0
@@ -273,6 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmgValue: 4
+  dashDmgValue: 20
   throwableObject: {fileID: 8964735631827330817, guid: 7f1a3776c7074fb4ab57d4604a3e7dc2, type: 3}
   attackCheck: {fileID: 9206482403994170004}
   abilityShotPoint: {fileID: 9206482403947652398}
@@ -283,6 +285,14 @@ MonoBehaviour:
   canAttack: 1
   canRecieveInput: 1
   InputRecieved: 0
+  magnitudeAttack: 2.5
+  roughnessAttack: 2.5
+  fadeInAttack: 0.1
+  fadeOutAttack: 1
+  magnitudeDash: 2.5
+  roughnessDash: 2.5
+  fadeInDash: 0.1
+  fadeOutDash: 1
 --- !u!1 &9206482403261859862
 GameObject:
   m_ObjectHideFlags: 0
