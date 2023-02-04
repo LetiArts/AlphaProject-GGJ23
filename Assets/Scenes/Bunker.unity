@@ -6828,12 +6828,8 @@ MonoBehaviour:
   m_Grounded: 0
   plantGrowth: 0
   treeTransform: {fileID: 1610346123}
-<<<<<<< HEAD
   startGrowthSize: 0.1
   growthMultiplier: 2
-=======
-  growthMultiplier: 0
->>>>>>> 7b740f5f5811dca5d5b02f1cfc9e24192e3ba825
   plantFullSize: 1
 --- !u!61 &676160873
 BoxCollider2D:
@@ -13272,7 +13268,6 @@ Transform:
   m_Father: {fileID: 191753512}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &1140269818
 GameObject:
   m_ObjectHideFlags: 0
@@ -13370,8 +13365,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-=======
->>>>>>> 7b740f5f5811dca5d5b02f1cfc9e24192e3ba825
 --- !u!1 &1162938829
 GameObject:
   m_ObjectHideFlags: 0
