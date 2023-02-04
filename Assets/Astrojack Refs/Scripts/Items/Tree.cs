@@ -31,8 +31,10 @@ public class Tree : MonoBehaviour
     [Range(0,1)]
     public float plantGrowth;
 	public Transform treeTransform;
+    public float startGrowthSize;
 	public float growthMultiplier;
     public float plantFullSize;
+    private float startNendsize;
 
 	private void Awake() {
 		instance = this;
@@ -47,6 +49,7 @@ public class Tree : MonoBehaviour
 
 	private void Start() {
 		CheckGroundStatus();
+        startNendsize = plantFullSize + startGrowthSize;
 	}
 
 	// private void OnTriggerEnter2D(Collider2D other) {
@@ -142,6 +145,11 @@ public class Tree : MonoBehaviour
 
     void PlantGrowth()
     {
-        treeTransform.localScale = new Vector3(plantFullSize*plantGrowth, plantFullSize * plantGrowth, plantFullSize * plantGrowth);
+        plantGrowth += plantGrowth < 1? (Time.deltaTime * growthMultiplier)/100 : 0;
+        plantGrowth = Mathf.Clamp(plantGrowth, 0,1);
+        float sizeGrowthTotal = startGrowthSize+(plantFullSize * (plantFullSize * plantGrowth));
+
+
+        treeTransform.localScale = new Vector3(sizeGrowthTotal,sizeGrowthTotal,sizeGrowthTotal);
     }
 }
