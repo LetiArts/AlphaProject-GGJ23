@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 80885585}
   - component: {fileID: 80885586}
   m_Layer: 0
-  m_Name: Layer-4
+  m_Name: lights-small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -314,7 +314,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 80885584}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 6.4, z: 0}
   m_LocalScale: {x: 5.9475164, y: 4.09931, z: 3.5083}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2145,8 +2145,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709847038}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.9475164, y: 4.09931, z: 3.5083}
+  m_LocalPosition: {x: 0, y: -15.9097, z: 0}
+  m_LocalScale: {x: 1.1747609, y: 1.3002189, z: 3.5083}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1296005211}
@@ -2197,8 +2197,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 0.9858491, b: 0.9858491, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 73.40982, y: 39.06497}
+  m_DrawMode: 2
+  m_Size: {x: 148.95648, y: 14.592612}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2368,7 +2368,7 @@ GameObject:
   - component: {fileID: 741484167}
   - component: {fileID: 741484168}
   m_Layer: 0
-  m_Name: Layer-6
+  m_Name: trees-backgrouund-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2382,8 +2382,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741484166}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.9475164, y: 4.09931, z: 3.5083}
+  m_LocalPosition: {x: 0, y: -6.7, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1296005211}
@@ -2434,8 +2434,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 0.9858491, b: 0.9858491, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 73.40982, y: 39.06497}
+  m_DrawMode: 2
+  m_Size: {x: 28.910069, y: 6.899709}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2529,7 +2529,7 @@ GameObject:
   - component: {fileID: 841005972}
   - component: {fileID: 841005973}
   m_Layer: 0
-  m_Name: Layer-8
+  m_Name: trees-foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2543,8 +2543,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 841005971}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.9475164, y: 4.09931, z: 3.5083}
+  m_LocalPosition: {x: 0, y: 9.75, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1296005211}
@@ -2595,8 +2595,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 0.9858491, b: 0.9858491, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 73.40982, y: 39.06497}
+  m_DrawMode: 2
+  m_Size: {x: 28.890596, y: 12.366994}
   m_AdaptiveModeThreshold: 0.746
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2613,7 +2613,7 @@ GameObject:
   - component: {fileID: 857337476}
   - component: {fileID: 857337477}
   m_Layer: 0
-  m_Name: Layer-5
+  m_Name: trees-background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2627,8 +2627,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857337475}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.9475164, y: 4.09931, z: 3.5083}
+  m_LocalPosition: {x: 0, y: 9.52, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1296005211}
@@ -2679,8 +2679,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 0.9858491, b: 0.9858491, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 73.40982, y: 39.06497}
+  m_DrawMode: 2
+  m_Size: {x: 28.82773, y: 12.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3795,7 +3795,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 56.213814, y: 22.982502}
+  m_Size: {x: 114.06392, y: 22.982502}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4474,7 +4474,7 @@ GameObject:
   - component: {fileID: 1525415004}
   - component: {fileID: 1525415005}
   m_Layer: 0
-  m_Name: Layer-2
+  m_Name: trees-bg-faint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4488,8 +4488,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525415003}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.9475164, y: 4.09931, z: 3.5083}
+  m_LocalPosition: {x: -0.1899, y: 5.2914, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1296005211}
@@ -4540,8 +4540,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 0.9858491, b: 0.9858491, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 73.40982, y: 39.06497}
+  m_DrawMode: 2
+  m_Size: {x: 29.063261, y: 8.945871}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4866,7 +4866,7 @@ GameObject:
   - component: {fileID: 1719609723}
   - component: {fileID: 1719609724}
   m_Layer: 0
-  m_Name: Layer-9
+  m_Name: trees-top-cover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4880,8 +4880,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719609722}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.45, z: 0}
-  m_LocalScale: {x: 5.9475164, y: 4.09931, z: 3.5083}
+  m_LocalPosition: {x: 0, y: -1.2258, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1296005211}
@@ -4932,8 +4932,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 0.9858491, b: 0.9858491, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 73.40982, y: 39.06497}
+  m_DrawMode: 2
+  m_Size: {x: 28.99925, y: 9.429131}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4950,7 +4950,7 @@ GameObject:
   - component: {fileID: 1733357602}
   - component: {fileID: 1733357603}
   m_Layer: 0
-  m_Name: Layer-3
+  m_Name: trees-bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4964,8 +4964,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733357601}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.9475164, y: 4.09931, z: 3.5083}
+  m_LocalPosition: {x: -0.0772, y: -4.2879, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1296005211}
@@ -5016,8 +5016,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 0.9858491, b: 0.9858491, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 73.40982, y: 39.06497}
+  m_DrawMode: 2
+  m_Size: {x: 28.919443, y: 7.665767}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -5672,7 +5672,7 @@ GameObject:
   - component: {fileID: 2098449998}
   - component: {fileID: 2098449999}
   m_Layer: 0
-  m_Name: Layer-7
+  m_Name: lights-big
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5686,7 +5686,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098449997}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 6.3999996, z: 0}
   m_LocalScale: {x: 5.9475174, y: 4.099311, z: 3.5083}
   m_ConstrainProportionsScale: 0
   m_Children: []
