@@ -361,7 +361,9 @@ public class Enemy : MonoBehaviour
 		// isInvincible = true;
 		isHit = true;
 		anim.SetBool("Hit", true);
-		yield return new WaitForSeconds(0.1f);
+		canAttack = false;
+		yield return new WaitForSeconds(0.2f);
+		canAttack = true;
 		isHit = false;
 		anim.SetBool("Hit", false);
 		// isInvincible = false;

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3321236446826824562}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: groundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 9186663656720179365}
   - component: {fileID: -7240048927491813341}
   - component: {fileID: -914429290837323729}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Coin
   m_Icon: {fileID: 0}
@@ -106,10 +106,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -438314469
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: c29162d11d03499498205196908712a5, type: 3}
+  m_SortingLayerID: 1441723605
+  m_SortingLayer: 3
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: 7fbd9ab32b329464a8c464e9fea41ded, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -154,9 +154,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.18879974}
   serializedVersion: 2
-  m_Radius: 1.645
+  m_Radius: 1.4562002
 --- !u!61 &-7240048927491813341
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -174,7 +174,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.29, y: 3.21}
+    oldSize: {x: 2.96, y: 3.29}
     newSize: {x: 1.95, y: 3.29}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -195,4 +195,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be786a94b871724389e142bafdb6639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemStats: {fileID: 11400000, guid: 815a335263534e64d8b623cf02b5c3eb, type: 2}
+  itemStats: {fileID: 11400000, guid: 6a5b1b0159fe4d5458c89981eb18539d, type: 2}

@@ -15,6 +15,7 @@ MonoBehaviour:
   item: 1
   destroyTime: 15
   coinValue: 0
-  healthRestore: 35
+  gemValue: 0
+  healthRestore: 20
   makePlayerInvincible: 0
   pickupSoundName: medkit
