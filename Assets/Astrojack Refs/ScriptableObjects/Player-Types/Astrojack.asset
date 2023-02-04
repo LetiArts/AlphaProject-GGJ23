@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 215a7dc3caa01414cbeade312b0971ba, type: 3}
+  m_Name: Astrojack
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  movementSpeed: 50
+  _curHealth: 15
+  maxOxygen: 100
+  _curOxygen: 29.035557
+  healthRegenRate: 2
+  oxygenRefillMultiplier: 3
+  oxygenReductionMultiplier: 1.5
+  healthRegenInterval: 2
+  isInvincible: 0
+  fallBoundary: -20
+  thrustForce: 2
+  maxJetpackTime: 1
+  fillupRate: 0.1
+  hitSoundName: Grunt
+  deathSoundName: DeathVoice

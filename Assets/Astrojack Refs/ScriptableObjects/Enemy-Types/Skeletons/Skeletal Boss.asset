@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a92489ba19bd8fd4d974b5517fffe103, type: 3}
+  m_Name: Skeletal Boss
+  m_EditorClassIdentifier: 
+  maxHealth: 200
+  dealingDamage: 25
+  timeToDecideNextMove: 0.35
+  moveSpeed: 8
+  m_DashForce: 15
+  target: Player
+  meleeDist: 4.5
+  explodeDist: 1.5
+  explosionDelay: 10
+  rangeDist: 0
+  shakeAmt: 0.1
+  shakeLength: 0.1
+  canShoot: 0
+  movingMine: 0
+  canJump: 0
+  canDash: 0
+  airControl: 0
+  deathSoundName: 

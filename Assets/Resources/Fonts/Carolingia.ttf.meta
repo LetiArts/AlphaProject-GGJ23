@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 104e40672ec77874898ba75fc2510d2c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Carolingia
+  fontNames:
+  - Carolingia
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d90c873da13b54f459251ae502384bde, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

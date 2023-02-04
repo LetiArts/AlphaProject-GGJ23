@@ -3,7 +3,24 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Missile
+  - ShopBtn
+  - Pill
+  - SmallGun
+  - BigGun
+  - Coin
+  - MuzzleFlash
+  - Companion
+  - Beacon
+  - Boss
+  - BulletTrail
+  - BulletHit
+  - dropbox
+  - Ground
+  - DroneHook
+  - GM
   layers:
   - Default
   - TransparentFX
@@ -41,9 +58,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1997406987
+    locked: 0
+  - name: Beacon
+    uniqueID: 1892091719
+    locked: 0
+  - name: Props
+    uniqueID: 1441723605
+    locked: 0
   - name: Player
     uniqueID: 841135987
     locked: 0
   - name: Enemy
     uniqueID: 2594838559
+    locked: 0
+  - name: Foreground
+    uniqueID: 1810846507
+    locked: 0
+  - name: UI
+    uniqueID: 2225561125
     locked: 0

@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: f4343e4331b90e845be13e769a64b9b6
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Comic Block DEMO by Marta van E
+  fontNames:
+  - Comic Block DEMO by Marta van E
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e715f66f88d34b741b711b4b3a7411af, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

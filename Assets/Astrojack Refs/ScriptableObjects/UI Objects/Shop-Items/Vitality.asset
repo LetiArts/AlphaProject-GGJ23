@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b7c309e03ea257449960e81aa7ec2a3, type: 3}
+  m_Name: Vitality
+  m_EditorClassIdentifier: 
+  itemName: Vitality
+  itemImage: {fileID: -224833393, guid: ccca7f654a026bf40a55e1107df32cef, type: 3}
+  ItemLevelDetails:
+  - levelName: Lvl 1
+    itemPrice: 300
+    waveTarget: 1
+    description: Unlock health regeneration
+  - levelName: Lvl 2
+    itemPrice: 400
+    waveTarget: 4
+    description: '+ 10% health regen speed '
+  - levelName: Lvl 3
+    itemPrice: 350
+    waveTarget: 8
+    description: '+ 15% health regen speed '
+  - levelName: Lvl 4
+    itemPrice: 400
+    waveTarget: 12
+    description: '+ 20% health regen speed '
+  - levelName: Lvl 5
+    itemPrice: 500
+    waveTarget: 7
+    description: '+ 25% health regen speed '
+  pickupSoundName: 

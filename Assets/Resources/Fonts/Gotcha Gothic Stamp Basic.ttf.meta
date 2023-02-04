@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 241ac5c57c7649e4aa14e4fb51d572e3
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 32
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Gotcha Gothic Stamp
+  fontNames:
+  - Gotcha Gothic Stamp
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 4ce65645e1d448044b75275a0c3f040d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 1
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

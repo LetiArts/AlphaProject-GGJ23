@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 863cb3b986201b247bb18d7f99407a59
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: kurt
+  fontNames:
+  - kurt
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: cfcdff51a030a934089c4cd00c634ea2, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
