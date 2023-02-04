@@ -557,8 +557,8 @@ MonoBehaviour:
   lookAheadReturnSpeed: 0.5
   lookAheadMoveThreshold: 0.1
   yPosRestriction: 10
-  clampXmin: 0
-  clampXmax: 0
+  clampXmin: -30
+  clampXmax: 30
 --- !u!1 &191753511
 GameObject:
   m_ObjectHideFlags: 0
