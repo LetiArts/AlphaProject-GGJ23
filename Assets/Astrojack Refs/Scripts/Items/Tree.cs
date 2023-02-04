@@ -31,6 +31,12 @@ public class Tree : MonoBehaviour
 	bool waited = false; //for regen purposes..
 	bool justRepaired = false;
 
+    [Space]
+    [Range(0,1)]
+    public float plantGrowth;
+
+    public float plantFullSize;
+
 	private void Awake() {
 		instance = this;
 
@@ -85,7 +91,12 @@ public class Tree : MonoBehaviour
 		}
 	}
 
-	public void CheckGroundStatus()
+    private void Update()
+    {
+       PlantGrowth();
+    }
+
+    public void CheckGroundStatus()
 	{
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;
@@ -195,5 +206,9 @@ public class Tree : MonoBehaviour
     void DestroyTree()
     {
 
+    }
+    void PlantGrowth()
+    {
+        transform.localScale = new Vector3(plantFullSize*plantGrowth, plantFullSize * plantGrowth, plantFullSize * plantGrowth);
     }
 }
