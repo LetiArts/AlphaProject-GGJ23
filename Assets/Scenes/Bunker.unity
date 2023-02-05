@@ -14477,8 +14477,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818285ecf4048dc418f26697639eabd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmgValue: 40
-  dashDmgValue: 10
+  dmgValue: 50
+  dashDmgValue: 20
   throwableObject: {fileID: 8964735631827330817, guid: 7f1a3776c7074fb4ab57d4604a3e7dc2, type: 3}
   attackCheck: {fileID: 199657871}
   abilityShotPoint: {fileID: 1231544759}

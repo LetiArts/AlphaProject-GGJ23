@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   movementSpeed: 50
-  _curHealth: 15
+  _curHealth: 100
   maxOxygen: 100
   _curOxygen: 29.035557
   healthRegenRate: 2
   oxygenRefillMultiplier: 3
   oxygenReductionMultiplier: 1.5
   healthRegenInterval: 2
-  damageResistance: 1
+  damageResistance: 10
   fallBoundary: -20
   thrustForce: 2
   maxJetpackTime: 1
