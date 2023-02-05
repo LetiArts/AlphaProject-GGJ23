@@ -21,6 +21,8 @@ TagManager:
   - DroneHook
   - GM
   - TreeTarget
+  - HUD
+  - TraceObject
   layers:
   - Default
   - TransparentFX
