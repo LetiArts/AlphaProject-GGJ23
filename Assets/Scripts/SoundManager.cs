@@ -140,11 +140,13 @@ public class SoundManager : MonoBehaviour
                     if (IsBackgroundMusicMuted() == false && sound.isPlaying() == false)
                     {
                         sound.Play();
+                        Debug.LogError($"Sound {sound.ClipName} is playing");
                     }
                 }
                 else{
                     sound.isCurrentBG = false;
                     sound.Stop();
+                    Debug.LogError($"Sound {sound.ClipName} has been stopped");
                 }
             }
 

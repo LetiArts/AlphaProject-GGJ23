@@ -50,9 +50,9 @@ public class GameMaster : MonoBehaviour {
 
 		//caching
 		audioManager = SoundManager.instance;
-		if (audioManager == null)
+		if (audioManager != null)
 		{
-			audioManager.PlayDefualtBG();
+			audioManager.SetCurrentBG("GameBG");
 		}
 	}
 

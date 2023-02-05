@@ -1611,7 +1611,7 @@ MonoBehaviour:
     isDefaultBG: 0
     isCurrentBG: 0
     clip: {fileID: 8300000, guid: 7934a4f8b6a04af459bbd647b939caac, type: 3}
-    volume: 0.5
+    volume: 1
     pitch: 1
     loop: 0
     randomVolume: 0
@@ -1621,16 +1621,56 @@ MonoBehaviour:
     isDefaultBG: 0
     isCurrentBG: 0
     clip: {fileID: 8300000, guid: 4dcbef16a8acda64aba0ddc4beb2e4e8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    randomVolume: 0
+    randomPitch: 0
+  - ClipName: click
+    isBGSound: 0
+    isDefaultBG: 0
+    isCurrentBG: 0
+    clip: {fileID: 8300000, guid: 674c13016bfc7dd4788c57ccb76c36ba, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
     randomVolume: 0
     randomPitch: 0
-  - ClipName: clcik
+  - ClipName: Death_Enemy
     isBGSound: 0
     isDefaultBG: 0
     isCurrentBG: 0
-    clip: {fileID: 8300000, guid: 674c13016bfc7dd4788c57ccb76c36ba, type: 3}
+    clip: {fileID: 8300000, guid: f6939bdb95120964ea0cb957579b43c1, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    randomVolume: 0
+    randomPitch: 0
+  - ClipName: Death_Player
+    isBGSound: 0
+    isDefaultBG: 0
+    isCurrentBG: 0
+    clip: {fileID: 8300000, guid: 7934a4f8b6a04af459bbd647b939caac, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    randomVolume: 0
+    randomPitch: 0
+  - ClipName: Hit_Tree
+    isBGSound: 0
+    isDefaultBG: 0
+    isCurrentBG: 0
+    clip: {fileID: 8300000, guid: f6939bdb95120964ea0cb957579b43c1, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    randomVolume: 0
+    randomPitch: 0
+  - ClipName: Death_Tree
+    isBGSound: 0
+    isDefaultBG: 0
+    isCurrentBG: 0
+    clip: {fileID: 8300000, guid: f8f3a93bcb41af74a891f39b93cbd6d8, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0

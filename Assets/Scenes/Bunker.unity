@@ -225,7 +225,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13184377}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 75.07, y: -4.73, z: 0}
+  m_LocalPosition: {x: 75.24, y: -7.04, z: 0}
   m_LocalScale: {x: 21, y: 21, z: 11}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -270,8 +270,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1997406987
-  m_SortingLayer: 1
+  m_SortingLayerID: 1810846507
+  m_SortingLayer: 6
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300136, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
   m_Color: {r: 0.2004717, g: 0.26037738, b: 0.5, a: 1}
@@ -6563,7 +6563,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515981499}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -76.8, y: -4.73, z: 0}
+  m_LocalPosition: {x: -76.97, y: -6.18, z: 0}
   m_LocalScale: {x: 21, y: 21, z: 21}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6608,8 +6608,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1997406987
-  m_SortingLayer: 1
+  m_SortingLayerID: 1810846507
+  m_SortingLayer: 6
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300136, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
   m_Color: {r: 0.2004717, g: 0.26037738, b: 0.5, a: 1}
@@ -13610,7 +13610,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949925128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30, y: 0, z: 0}
+  m_LocalPosition: {x: -40, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21454,7 +21454,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1910177061}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30, y: 0, z: 0}
+  m_LocalPosition: {x: 40, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
