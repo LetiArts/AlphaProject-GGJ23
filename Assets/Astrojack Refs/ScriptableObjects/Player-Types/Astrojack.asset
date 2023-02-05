@@ -21,10 +21,10 @@ MonoBehaviour:
   oxygenRefillMultiplier: 3
   oxygenReductionMultiplier: 1.5
   healthRegenInterval: 2
-  isInvincible: 0
+  damageResistance: 1
   fallBoundary: -20
   thrustForce: 2
   maxJetpackTime: 1
   fillupRate: 0.1
-  hitSoundName: Grunt
-  deathSoundName: DeathVoice
+  hitSoundName: Hit_Player
+  deathSoundName: Heath_Player

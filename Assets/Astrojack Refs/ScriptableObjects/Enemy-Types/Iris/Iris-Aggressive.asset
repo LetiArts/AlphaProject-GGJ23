@@ -29,4 +29,4 @@ MonoBehaviour:
   canJump: 0
   canDash: 0
   airControl: 0
-  deathSoundName: Explosion
+  deathSoundName: Death_Enemy

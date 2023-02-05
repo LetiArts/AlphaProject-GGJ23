@@ -52,7 +52,7 @@ public class GameMaster : MonoBehaviour {
 		audioManager = SoundManager.instance;
 		if (audioManager == null)
 		{
-			Debug.LogError("FREAK OUT! No AudioManager found in the scene.");
+			audioManager.PlayDefualtBG();
 		}
 	}
 

@@ -255,6 +255,7 @@ public class Enemy : MonoBehaviour
 			
 			float direction = damage / Mathf.Abs(damage);
 			damage = Mathf.Abs(damage);
+			SoundManager.instance.PlaySFX("Hit_Enemy");
 			// transform.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 			// transform.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(direction * 10f, 5f)); 
 

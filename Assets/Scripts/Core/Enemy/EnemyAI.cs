@@ -292,6 +292,7 @@ public class EnemyAI : MonoBehaviour {
 			damage = Mathf.Abs(damage);
 
 			transform.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(direction * 10f, 5f)); 
+			SoundManager.instance.PlaySFX("Hit_Enemy");
 
 			curHealth -= (int)damage;
 

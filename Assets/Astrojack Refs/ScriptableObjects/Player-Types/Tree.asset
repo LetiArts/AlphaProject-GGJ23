@@ -26,5 +26,5 @@ MonoBehaviour:
   thrustForce: 0
   maxJetpackTime: 0
   fillupRate: 0
-  hitSoundName: Grunt
-  deathSoundName: DeathVoice
+  hitSoundName: Hit_Tree
+  deathSoundName: Death_Tree

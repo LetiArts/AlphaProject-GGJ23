@@ -9,32 +9,36 @@ public class MenuManager : MonoBehaviour {
 	[SerializeField]
 	string PressButonSound = "ButtonPress";
 
-	// SoundManager audioManager;
+    public void PlayFXSound(string SoundName)
+    {
+        if (SoundManager.instance.IsSoundFXMuted() == false)
+        {
+            SoundManager.instance.PlaySFX(SoundName);
+        }
+    }
 
-	void Start()
-	{
-		// audioManager = SoundManager.instance;
-		// if (audioManager == null) 
-		// {
-		// 	Debug.LogError ("No audio found");
-		// }
-	}
-	// Use this for initialization
-	public void StartGame () 
-	{
-		// audioManager.PlaySFX (PressButonSound);
-		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
-	}
+    public void BeginGame()
+    {
+        CheckingFirstTime();
+    }
+
+
+    public void CheckingFirstTime()
+    {
+        if (PlayerPrefs.GetInt("first_time_opening", 1) == 1)
+        {
+            PlayerPrefs.SetInt("first_time_opening", 0);
+        	
+			SceneManager.LoadScene("DialogScene");
+        }
+		else{
+        	SceneManager.LoadScene("Bunker");
+		}
+    }
 
 	public void QuitGame()
 	{
-		// audioManager.PlaySFX (PressButonSound);
 		Debug.Log ("QUIT");
 		Application.Quit ();
-	}
-
-	public void OnMouseOver()
-	{
-		// audioManager.PlaySFX (hoverOverSound);
 	}
 }
