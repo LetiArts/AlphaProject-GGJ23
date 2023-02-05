@@ -16,12 +16,12 @@ MonoBehaviour:
   - name: wave1
     enemyGroups:
     - enemy: {fileID: 6411786306228938353, guid: 3cf664c2c3c5c5147aeadcf10a2965b5, type: 3}
-      isGroundBeaconEnemy: 0
+      isGroundTreeEnemy: 0
       isBossEnemy: 0
       count: 4
       spawnrate: 1.5
     - enemy: {fileID: 5970512455178810866, guid: 24455ada220b31a45b5da6fffc5d2660, type: 3}
-      isGroundBeaconEnemy: 1
+      isGroundTreeEnemy: 0
       isBossEnemy: 0
       count: 2
       spawnrate: 1.5
@@ -31,17 +31,17 @@ MonoBehaviour:
   - name: wave2
     enemyGroups:
     - enemy: {fileID: 6411786306228938353, guid: 3cf664c2c3c5c5147aeadcf10a2965b5, type: 3}
-      isGroundBeaconEnemy: 0
+      isGroundTreeEnemy: 0
       isBossEnemy: 0
       count: 5
       spawnrate: 1
     - enemy: {fileID: 1801281879414006756, guid: 5650c15ce4934ec48ac07777c3a0e193, type: 3}
-      isGroundBeaconEnemy: 0
+      isGroundTreeEnemy: 0
       isBossEnemy: 0
       count: 3
       spawnrate: 1.5
     - enemy: {fileID: 2412088394664231639, guid: 832ad4a97b95ade4c952b81116341cee, type: 3}
-      isGroundBeaconEnemy: 0
+      isGroundTreeEnemy: 0
       isBossEnemy: 0
       count: 3
       spawnrate: 1.5
@@ -50,23 +50,18 @@ MonoBehaviour:
     timeBtnDrops: 0
   - name: wave3
     enemyGroups:
-    - enemy: {fileID: 6411786306228938353, guid: 3cf664c2c3c5c5147aeadcf10a2965b5, type: 3}
-      isGroundBeaconEnemy: 0
-      isBossEnemy: 0
+    - enemy: {fileID: 6411786306228938353, guid: cc419d70e2f22e64fb6525900984671d, type: 3}
+      isGroundTreeEnemy: 0
+      isBossEnemy: 1
       count: 3
       spawnrate: 1
-    - enemy: {fileID: 1801281879414006756, guid: 5650c15ce4934ec48ac07777c3a0e193, type: 3}
-      isGroundBeaconEnemy: 0
-      isBossEnemy: 0
-      count: 3
-      spawnrate: 1.5
-    - enemy: {fileID: 8916379713163639439, guid: 00d46a2b36b7d694195c671b285d2369, type: 3}
-      isGroundBeaconEnemy: 0
+    - enemy: {fileID: 2412088394664231639, guid: 832ad4a97b95ade4c952b81116341cee, type: 3}
+      isGroundTreeEnemy: 0
       isBossEnemy: 0
       count: 3
       spawnrate: 1.5
     - enemy: {fileID: 2412088394664231639, guid: 6b82ab343a4808a4f99f7b5c0552576b, type: 3}
-      isGroundBeaconEnemy: 0
+      isGroundTreeEnemy: 0
       isBossEnemy: 0
       count: 2
       spawnrate: 1.5
@@ -75,25 +70,20 @@ MonoBehaviour:
     timeBtnDrops: 0
   - name: wave4
     enemyGroups:
-    - enemy: {fileID: 6411786306228938353, guid: 3cf664c2c3c5c5147aeadcf10a2965b5, type: 3}
-      isGroundBeaconEnemy: 0
+    - enemy: {fileID: 2412088394664231639, guid: 1c808c047d5d05e48879cd498b4153fc, type: 3}
+      isGroundTreeEnemy: 0
       isBossEnemy: 0
-      count: 3
+      count: 4
       spawnrate: 1
-    - enemy: {fileID: 1801281879414006756, guid: 5650c15ce4934ec48ac07777c3a0e193, type: 3}
-      isGroundBeaconEnemy: 0
+    - enemy: {fileID: 2412088394664231639, guid: 832ad4a97b95ade4c952b81116341cee, type: 3}
+      isGroundTreeEnemy: 0
       isBossEnemy: 0
-      count: 3
+      count: 4
       spawnrate: 1.5
     - enemy: {fileID: 2412088394664231639, guid: 832ad4a97b95ade4c952b81116341cee, type: 3}
-      isGroundBeaconEnemy: 0
+      isGroundTreeEnemy: 0
       isBossEnemy: 0
-      count: 3
-      spawnrate: 1.5
-    - enemy: {fileID: 3470852429845541494, guid: cbc97fe103570824b953ead138fa6e36, type: 3}
-      isGroundBeaconEnemy: 0
-      isBossEnemy: 0
-      count: 3
+      count: 4
       spawnrate: 1.5
     timeBetweenGroups: 1
     itemsToDrop: []
@@ -101,48 +91,148 @@ MonoBehaviour:
   - name: wave5
     enemyGroups:
     - enemy: {fileID: 5970512455178810866, guid: 24455ada220b31a45b5da6fffc5d2660, type: 3}
-      isGroundBeaconEnemy: 1
+      isGroundTreeEnemy: 0
       isBossEnemy: 0
       count: 3
       spawnrate: 1
     - enemy: {fileID: 1801281879414006756, guid: 5650c15ce4934ec48ac07777c3a0e193, type: 3}
-      isGroundBeaconEnemy: 0
+      isGroundTreeEnemy: 0
       isBossEnemy: 0
       count: 3
       spawnrate: 1.5
     - enemy: {fileID: 6411786306228938353, guid: cc419d70e2f22e64fb6525900984671d, type: 3}
-      isGroundBeaconEnemy: 0
+      isGroundTreeEnemy: 0
       isBossEnemy: 0
       count: 1
       spawnrate: 1.5
     - enemy: {fileID: 3470852429845541494, guid: cbc97fe103570824b953ead138fa6e36, type: 3}
-      isGroundBeaconEnemy: 0
+      isGroundTreeEnemy: 0
       isBossEnemy: 0
       count: 3
       spawnrate: 1.5
     timeBetweenGroups: 1
     itemsToDrop: []
     timeBtnDrops: 0
-  - name: wave5
+  - name: wave6
     enemyGroups:
-    - enemy: {fileID: 3470852429845541494, guid: cbc97fe103570824b953ead138fa6e36, type: 3}
-      isGroundBeaconEnemy: 1
+    - enemy: {fileID: 2412088394664231639, guid: fd4943544e4503d4f89bff40fcca476d, type: 3}
+      isGroundTreeEnemy: 0
       isBossEnemy: 0
       count: 2
       spawnrate: 1
-    - enemy: {fileID: 1801281879414006756, guid: 5650c15ce4934ec48ac07777c3a0e193, type: 3}
-      isGroundBeaconEnemy: 0
+    - enemy: {fileID: 2412088394664231639, guid: 1c808c047d5d05e48879cd498b4153fc, type: 3}
+      isGroundTreeEnemy: 0
       isBossEnemy: 0
       count: 3
       spawnrate: 1.5
-    - enemy: {fileID: 6411786306228938353, guid: cc419d70e2f22e64fb6525900984671d, type: 3}
-      isGroundBeaconEnemy: 0
+    - enemy: {fileID: 2412088394664231639, guid: 832ad4a97b95ade4c952b81116341cee, type: 3}
+      isGroundTreeEnemy: 0
       isBossEnemy: 0
       count: 1
       spawnrate: 1.5
     - enemy: {fileID: 2412088394664231639, guid: 1c808c047d5d05e48879cd498b4153fc, type: 3}
-      isGroundBeaconEnemy: 0
+      isGroundTreeEnemy: 0
       isBossEnemy: 0
+      count: 3
+      spawnrate: 1.5
+    timeBetweenGroups: 1
+    itemsToDrop: []
+    timeBtnDrops: 0
+  - name: wave7
+    enemyGroups:
+    - enemy: {fileID: 1801281879414006756, guid: 5650c15ce4934ec48ac07777c3a0e193, type: 3}
+      isGroundTreeEnemy: 0
+      isBossEnemy: 0
+      count: 2
+      spawnrate: 1
+    - enemy: {fileID: 5970512455178810866, guid: 24455ada220b31a45b5da6fffc5d2660, type: 3}
+      isGroundTreeEnemy: 0
+      isBossEnemy: 0
+      count: 3
+      spawnrate: 1.5
+    - enemy: {fileID: 2412088394664231639, guid: 1c808c047d5d05e48879cd498b4153fc, type: 3}
+      isGroundTreeEnemy: 0
+      isBossEnemy: 0
+      count: 1
+      spawnrate: 1.5
+    - enemy: {fileID: 2412088394664231639, guid: 832ad4a97b95ade4c952b81116341cee, type: 3}
+      isGroundTreeEnemy: 0
+      isBossEnemy: 0
+      count: 3
+      spawnrate: 1.5
+    timeBetweenGroups: 1
+    itemsToDrop: []
+    timeBtnDrops: 0
+  - name: wave8
+    enemyGroups:
+    - enemy: {fileID: 1801281879414006756, guid: 5650c15ce4934ec48ac07777c3a0e193, type: 3}
+      isGroundTreeEnemy: 0
+      isBossEnemy: 0
+      count: 2
+      spawnrate: 1
+    - enemy: {fileID: 5970512455178810866, guid: 24455ada220b31a45b5da6fffc5d2660, type: 3}
+      isGroundTreeEnemy: 0
+      isBossEnemy: 0
+      count: 3
+      spawnrate: 1.5
+    - enemy: {fileID: 6411786306228938353, guid: 3cf664c2c3c5c5147aeadcf10a2965b5, type: 3}
+      isGroundTreeEnemy: 0
+      isBossEnemy: 0
+      count: 1
+      spawnrate: 1.5
+    - enemy: {fileID: 6411786306228938353, guid: cc419d70e2f22e64fb6525900984671d, type: 3}
+      isGroundTreeEnemy: 0
+      isBossEnemy: 0
+      count: 3
+      spawnrate: 1.5
+    timeBetweenGroups: 1
+    itemsToDrop: []
+    timeBtnDrops: 0
+  - name: wave9
+    enemyGroups:
+    - enemy: {fileID: 8916379713163639439, guid: 267feb058bd2a65469af74668b9b9e83, type: 3}
+      isGroundTreeEnemy: 0
+      isBossEnemy: 1
+      count: 2
+      spawnrate: 1
+    - enemy: {fileID: 2412088394664231639, guid: 1c808c047d5d05e48879cd498b4153fc, type: 3}
+      isGroundTreeEnemy: 0
+      isBossEnemy: 0
+      count: 3
+      spawnrate: 1.5
+    - enemy: {fileID: 6411786306228938353, guid: 3cf664c2c3c5c5147aeadcf10a2965b5, type: 3}
+      isGroundTreeEnemy: 0
+      isBossEnemy: 0
+      count: 1
+      spawnrate: 1.5
+    - enemy: {fileID: 1801281879414006756, guid: 5650c15ce4934ec48ac07777c3a0e193, type: 3}
+      isGroundTreeEnemy: 0
+      isBossEnemy: 0
+      count: 3
+      spawnrate: 1.5
+    timeBetweenGroups: 1
+    itemsToDrop: []
+    timeBtnDrops: 0
+  - name: wave10
+    enemyGroups:
+    - enemy: {fileID: 8916379713163639439, guid: 267feb058bd2a65469af74668b9b9e83, type: 3}
+      isGroundTreeEnemy: 0
+      isBossEnemy: 1
+      count: 2
+      spawnrate: 1
+    - enemy: {fileID: 6411786306228938353, guid: cc419d70e2f22e64fb6525900984671d, type: 3}
+      isGroundTreeEnemy: 0
+      isBossEnemy: 1
+      count: 3
+      spawnrate: 1.5
+    - enemy: {fileID: 8916379713163639439, guid: 00d46a2b36b7d694195c671b285d2369, type: 3}
+      isGroundTreeEnemy: 0
+      isBossEnemy: 1
+      count: 1
+      spawnrate: 1.5
+    - enemy: {fileID: 2412088394664231639, guid: fd4943544e4503d4f89bff40fcca476d, type: 3}
+      isGroundTreeEnemy: 0
+      isBossEnemy: 1
       count: 3
       spawnrate: 1.5
     timeBetweenGroups: 1
